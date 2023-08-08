@@ -1,6 +1,6 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
-import { UsersRepository } from "../users-repository";
+import { UsersRepository } from '../users-repository'
 
 export class PrismaUsersRepository implements UsersRepository {
   async findByEmail(email: string) {
@@ -10,11 +10,12 @@ export class PrismaUsersRepository implements UsersRepository {
       },
     })
 
-    return user;
+    return user
   }
+
   async create(data: Prisma.UserCreateInput) {
     const user = await prisma.user.create({
-      data
+      data,
     })
 
     return user
