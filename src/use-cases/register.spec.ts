@@ -2,13 +2,12 @@ import { expect, describe, it, beforeEach } from 'vitest'
 import { RegisterUseCase } from './register'
 import { compare } from 'bcryptjs'
 import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-repository'
-import { UsersAlreadyExistsError } from './errors/users-already-exists-error'
+import { UsersAlreadyExistsError } from '@/use-cases/errors/users-already-exists-error'
 
 let usersRepository: InMemoryUsersRepository
 let sut: RegisterUseCase
 
 describe('Register Use Case', async () => {
-
   beforeEach(() => {
     usersRepository = new InMemoryUsersRepository()
     sut = new RegisterUseCase(usersRepository)
@@ -20,8 +19,6 @@ describe('Register Use Case', async () => {
       email: 'johndoe@example.com',
       password: '123456',
     })
-
-    
 
     expect(user.id).toEqual(expect.any(String))
   })
