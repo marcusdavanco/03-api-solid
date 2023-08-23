@@ -40,8 +40,6 @@ describe('Check-in Use Case', async () => {
       userLongitude: -49.6401091,
     })
 
-    console.log(checkIn.created_at)
-
     expect(checkIn.id).toEqual(expect.any(String))
   })
 
