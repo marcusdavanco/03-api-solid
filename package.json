@@ -28,7 +28,7 @@
     "tsx": "3.12.7",
     "typescript": "5.1.6",
     "vite-tsconfig-paths": "4.2.0",
-    "vitest": "0.34.1"
+    "vitest": "0.33.0"
   },
   "dependencies": {
     "@fastify/jwt": "7.2.0",
@@ -37,6 +37,7 @@
     "dayjs": "1.11.9",
     "dotenv": "16.3.1",
     "fastify": "4.21.0",
+    "remove": "0.1.5",
     "zod": "3.21.4"
   }
 }
